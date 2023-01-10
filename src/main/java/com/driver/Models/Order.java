@@ -1,12 +1,9 @@
 package com.driver.Models;
 import java.sql.Time;
-
 public class Order {
+
     private String id;
     private int deliveryTime;
-
-    public Order() {
-    }
 
     public Order(String id, String deliveryTime) {
 
@@ -15,14 +12,13 @@ public class Order {
         this.id = id;
         int hoursToMins = Integer.valueOf(deliveryTime.substring(0,2)) * 60;
         int mins = Integer.valueOf(deliveryTime.substring(3,5));
-        this.deliveryTime = hoursToMins + mins;;
+        this.deliveryTime = hoursToMins + mins;
+
     }
 
     public String getId() {
         return id;
     }
 
-    public int getDeliveryTime() {
-        return deliveryTime;
-    }
+    public int getDeliveryTime() {return deliveryTime;}
 }
