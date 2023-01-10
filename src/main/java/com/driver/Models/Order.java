@@ -2,20 +2,20 @@ package com.driver.Models;
 import java.sql.Time;
 
 public class Order {
-
     private String id;
     private int deliveryTime;
+
+    public Order() {
+    }
 
     public Order(String id, String deliveryTime) {
 
         // The deliveryTime has to converted from string to int and then stored in the attribute
         //deliveryTime  = HH*60 + MM
-        String[] time = deliveryTime.split(":");
-        int hour = Integer.parseInt(time[0]);
-        int min = Integer.parseInt(time[1]);
-
         this.id = id;
-        this.deliveryTime = hour*60 + min;
+        int hoursToMins = Integer.valueOf(deliveryTime.substring(0,2)) * 60;
+        int mins = Integer.valueOf(deliveryTime.substring(3,5));
+        this.deliveryTime = hoursToMins + mins;;
     }
 
     public String getId() {
