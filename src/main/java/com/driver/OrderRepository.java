@@ -69,7 +69,10 @@ public class OrderRepository {
     }
 
     public Integer getCountOfUnassignedOrders() {
-        return unassignedOrders.size();
+        //return unassignedOrders.size();
+
+        int countOfOrders = orderDb.size() - unassignedOrders.size();
+        return countOfOrders;
     }
 
     public void deletePartnerById(String partnerId) {

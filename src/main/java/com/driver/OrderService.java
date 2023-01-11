@@ -48,8 +48,8 @@ public class OrderService {
     }
 
     public Integer getCountOfUnassignedOrders() {
-        Integer count = orderRepository.getCountOfUnassignedOrders();
-        return count;
+        int countOfOrders = orderRepository.getCountOfUnassignedOrders();
+        return countOfOrders;
     }
 
     public void deletePArtnerById(String partnerId) {
