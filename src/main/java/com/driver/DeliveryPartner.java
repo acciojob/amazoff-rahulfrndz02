@@ -1,4 +1,4 @@
-package com.driver.Models;
+package com.driver;
 
 public class DeliveryPartner {
 

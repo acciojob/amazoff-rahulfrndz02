@@ -1,4 +1,4 @@
-package com.driver.Models;
+package com.driver;
 import java.sql.Time;
 public class Order {
 

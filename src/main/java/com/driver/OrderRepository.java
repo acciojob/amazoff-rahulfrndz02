@@ -1,10 +1,7 @@
-package com.driver.Repository;
+package com.driver;
 
-import com.driver.Models.DeliveryPartner;
-import com.driver.Models.Order;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Time;
 import java.util.*;
 
 
